@@ -1,0 +1,435 @@
+.pets {
+  padding: 80px 0 100px;
+  background-color: #F6F6F6;
+}
+
+.pets-title {
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 45.5px;
+  color: #545454;
+}
+
+.pets-content {
+  display: flex;
+  flex-wrap: wrap;
+
+  transition: all 0.5s ease;
+}
+
+.pet-card {
+  width: 270px;
+  background-color: #FAFAFA;
+  padding-bottom: 30px;
+  border-radius: 9px;
+  margin-bottom: 29px;
+}
+
+.pet-card:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  cursor: pointer;
+  background-color: #FFFFFF;
+}
+
+.pet-card:hover .pet-card-button {
+  background-color: #FDDCC4;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: none;
+}
+
+.pet-card-title {
+  text-align: center;
+  color: #545454;
+  margin-top: 28px;
+}
+
+.pet-card-button-wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.pet-card-button {
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  font-size: 17px;
+  font-family: Georgia;
+  font-weight: 400;
+  color: #292929;
+  text-align: center;
+  padding: 15px 45px;
+  background-color: white;
+  letter-spacing: 0.06em;
+}
+
+.pets-navigation {
+  margin: 30px auto 0;
+  display: flex;
+  justify-content: space-between;
+  width: 340px;
+}
+
+.pets-nav-button {
+  width: 52px;
+  height: 52px;
+  border-radius: 100px;
+  border: 2px solid #CDCDCD;
+  background-color: #FAFAFA;
+  color: #CDCDCD;
+}
+
+.pets-nav-number {
+  background-color: #F1CDB3;
+  border: none;
+}
+
+.pets-nav-button-text {
+  color: #292929;
+  line-height: 23px;
+}
+
+.pets-nav-button:hover {
+  background-color: #FDDCC4;
+  color: #292929;
+  cursor: pointer;
+  border: none;
+}
+
+.pets-nav-button.disabled:hover {
+  background-color: #FAFAFA;
+  border: 2px solid #CDCDCD;
+  color: #CDCDCD;
+  cursor: default;
+}
+
+.pets-nav-number:hover {
+  background-color: #F1CDB3;
+  cursor: default;
+  color: #292929;
+}
+
+.pets-button-active {
+  border: 2px solid #F1CDB3;
+  color: #292929;
+}
+
+.modal-window {
+  visibility: hidden;
+  display: flex;
+  width: 900px;
+  height: 500px;
+  border-radius: 9px;
+  z-index: 10;
+  background-color: #FAFAFA;
+
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.modal-window_active {
+  visibility: visible;
+  z-index: 10;
+}
+
+.modal-content {
+  margin-top: 50px;
+  width: 351px;
+  margin-left: 29px;
+}
+
+.modal-img {
+  width: 500px;
+  z-index: 50;
+  border-radius: 9px;
+}
+
+.modal_type {
+  margin-top: 40px;
+}
+
+.modal-name {
+  color: #000000;
+}
+
+.modal-type {
+  color: #000000;
+}
+
+.modal-breed {
+  color: #000000;
+}
+
+.modal-description {
+  margin-top: 40px;
+  color: #000000;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+  font-family: Georgia;
+}
+
+.modal-list {
+  margin-top: 40px;
+  margin-left: 15px;
+  display: flex;
+  flex-direction: column;
+  list-style-image: url(../../../assets/icons/dot.png);
+}
+
+.modal-list-item {
+  margin-bottom: 10px;
+}
+
+.modal-list-title {
+  font-family: Georgia;
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+}
+
+.modal-list-text {
+  font-family: Georgia;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 16.5px;
+  letter-spacing: 0.06em;
+}
+
+.close-button {
+  color: #aaa;
+  font-weight: bold;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -52px;
+  left: 900px;
+}
+
+.close-button:hover {
+  cursor: pointer;
+  background-color: #FDDCC4;
+  border: 2px solid #FDDCC4;
+}
+
+/* Реализация пагинации */
+
+.all-pets-content {
+  display: flex;
+  position: relative;
+  left: 0;
+  width: 1280px;
+  overflow: hidden;
+}
+
+.pets-content {
+  position: relative;
+  justify-content: center;
+  left: 0;
+  margin: 45px 0;
+  width: 1280px;
+}
+
+
+.pet-card {
+  width: 270px;
+  background-color: #FAFAFA;
+  padding-bottom: 30px;
+  border-radius: 9px;
+  margin: 15px 20px;
+}
+
+
+/*_____________________ Адаптив для 768px _____________________*/
+
+@media only screen and (max-width: 1279px) {
+  .pets {
+    padding: 80px 0px 77px;
+  }
+
+  .pet-card:hover {
+    transform: scale(1.06);
+  }
+
+  .pet-card-title {
+    margin-top: 29px;
+  }
+
+  .pet-card:nth-child(7) {
+    display: none;
+  }
+
+  .pet-card:nth-child(8) {
+    display: none;
+  }
+
+  .pets-navigation {
+    margin-top: 0px;
+  }
+
+  .modal-window {
+    width: 630px;
+    height: 350px;
+  }
+
+  .modal-img {
+    width: 350px;
+  }
+
+  .modal-content {
+    margin-top: 10px;
+    width: 260px;
+    margin-left: 11px;
+  }
+
+  .modal_type {
+    margin-top: 10px;
+  }
+
+  .modal-description {
+    margin-top: 20px;
+    line-height: 14.3px;
+    font-size: 13px;
+  }
+
+  .modal-list {
+    margin-top: 20px;
+  }
+
+  .modal-list-item {
+    margin-bottom: 5px;
+  }
+
+  .close-button {
+    top: -57px;
+    left: 621px;
+  }
+
+  /* Реализация пагинации для 768px*/
+
+  .all-pets-content {
+    width: 768px;
+  }
+
+  .pets-content {
+    margin: 30px 0 40px;
+    width: 768px;
+    justify-content: center;
+  }
+
+  .pet-card {
+    margin: 15px 20px;
+  }
+}
+
+/*_____________________ Адаптив для 320px _____________________*/
+
+@media only screen and (max-width: 767px) {
+  .pets {
+    padding: 42px 0px;
+  }
+
+  .pets-title {
+    max-width: 300px;
+    font-size: 25px;
+    line-height: 32.5px;
+  }
+
+  .pet-card:hover {
+    transform: scale(1.04);
+  }
+
+  .pet-card-title {
+    margin-top: 27px;
+  }
+
+  .pet-card-button {
+    line-height: 22.1px;
+  }
+
+  .pet-card:nth-child(4) {
+    display: none;
+  }
+
+  .pet-card:nth-child(5) {
+    display: none;
+  }
+
+  .pet-card:nth-child(6) {
+    display: none;
+  }
+
+  .pets-navigation {
+    margin: 10px auto 0;
+    width: 300px;
+  }
+
+  .modal-window {
+    width: 240px;
+    padding-bottom: 10px;
+    height: auto;
+    transform: translate(-50%, -50%);
+  }
+
+  .modal-img {
+    display: none;
+  }
+
+  .modal-content {
+    margin-top: 10px;
+    width: 220px;
+    margin-left: 10px;
+    padding-bottom: 0px;
+  }
+
+  .modal-name {
+    text-align: center;
+  }
+
+  .modal_type {
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .modal-breed {
+    color: #000000;
+  }
+
+  .modal-description {
+    margin-top: 20px;
+    line-height: 14.3px;
+    font-size: 13px;
+    text-align: justify;
+  }
+
+  .close-button {
+    top: -57px;
+    left: 215px;
+  }
+
+  /* Реализация пагинации для 320px*/
+
+  .all-pets-content {
+    width: 320px;
+  }
+
+  .pets-content {
+    margin: 42px 0;
+    width: 320px;
+  }
+
+  .pet-card {
+    margin: 15px 0px;
+  }
+}

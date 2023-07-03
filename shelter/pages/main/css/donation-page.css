@@ -1,0 +1,128 @@
+.donation {
+  padding: 82px 182px 101px 183px;
+  background-color: #F6F6F6;
+  display: flex;
+  justify-content: space-between;
+}
+
+.donation-content {
+  display: flex;
+  width: 915px;
+  justify-content: space-between;
+}
+
+.donation-img {
+  margin-top: 11px;
+  height: 261px;
+}
+
+.donation-text {
+  max-width: 380px;
+}
+
+.donation-title {
+  color: #545454;
+  line-height: 45.5px;
+}
+
+.donation-description {
+  margin-top: 20px;
+  color: #545454;
+  letter-spacing: 0.06em;
+  font-family: Georgia;
+}
+
+.donation-card {
+  margin-top: 20px;
+  padding: 10px 15px;
+  background-color: #F1CDB3;
+  border: 0px;
+  border-radius: 9px;
+  font-family: Georgia;
+  font-size: 20px;
+  font-weight: 400;
+  color: #545454;
+  line-height: 23px;
+  text-align: center;
+  display: flex;
+  letter-spacing: 0.06em;
+}
+
+.donation-card-img {
+  margin-right: 15px;
+}
+
+.donation-card:hover {
+  background-color: #FDDCC4;
+  cursor: pointer;
+}
+
+.donation-card-description {
+  margin-top: 20px;
+  font-size: 12px;
+  font-style: italic;
+  line-height: 18px;
+  color: #B2B2B2;
+}
+
+.donation-link {
+  text-decoration: none;
+}
+
+/*_____________________ Адаптив для 768px _____________________*/
+
+@media only screen and (max-width: 1279px) {
+  .donation {
+    padding: 80px 132px 100px 131px;
+  }
+  .donation-content {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .donation-img {
+    margin-top: 60px;
+  }
+}
+
+/*_____________________ Адаптив для 320px _____________________*/
+
+@media only screen and (max-width: 767px) {
+  .donation {
+    padding: 44px 10px 42px;
+  }
+
+  .donation-content {
+    width: 300px;
+    justify-content: space-between;
+  }
+
+  .donation-title {
+    font-size: 25px;
+    line-height: 32.5px;
+    text-align: center;
+  }
+
+  .donation-description {
+    letter-spacing: normal;
+    text-align: center;
+    line-height: 24px;
+  }
+
+  .donation-card {
+    font-size: 15px;
+    line-height: 16.5px;
+    margin: 20px auto;
+    align-items: center;
+  }
+
+  .donation-card-description {
+    padding: 0 10px;
+    text-align: justify;
+  }
+
+  .donation-img {
+    margin-top: 42px;
+    width: 260px;
+    height: 135.2px;
+  }
+}

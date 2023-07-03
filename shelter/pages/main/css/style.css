@@ -1,0 +1,92 @@
+@import url("../../../css/reset.css");
+@import url("./main-page.css");
+@import url("./about-page.css");
+@import url("./pets-page.css");
+@import url("./help-page.css");
+@import url("./donation-page.css");
+@import url("./footer.css");
+
+body {
+
+  position: relative;
+  overflow-x: hidden;
+}
+
+.body_no_scroll {
+  overflow-y: hidden;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 1280px;
+}
+
+h1 {
+  font-size: 44px;
+  font-family: Georgia;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 57.2px;
+}
+
+h2 {
+  font-size: 35px;
+  font-family: Georgia;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+h3 {
+  font-size: 32px;
+  font-family: Georgia;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: Georgia;
+  letter-spacing: 0.06em;
+}
+
+p {
+  font-size: 15px;
+  font-family: Arial;
+  font-weight: 400;
+}
+
+.opacity-window {
+  visibility: hidden;
+  background: rgba(41, 41, 41, 0.6);
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.opacity-window_active {
+  visibility: visible;
+}
+
+.opacity-window_active:hover {
+  cursor: pointer;
+}
+
+/*_____________________ Адаптив для 768px _____________________*/
+
+@media only screen and (max-width: 1279px) {
+  .wrapper {
+    width: 768px;
+  }
+}
+
+/*_____________________ Адаптив для 320px _____________________*/
+
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    width: 320px;
+  }
+}
